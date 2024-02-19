@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <style>
+        *{
+            position: relative;
+        }
+        .container{
+            display: flex;
+        }
+        /* .row{
+            border: 2px solid black;
+        } */
+        .outer{
+            margin-top:45px;
+            display: grid;
+            place-items: center;
+            /* height: 100vh; */
+        }
+        .col{
+            display: flex;
+            font-size: 35px;
+            font-weight: 400;
+             align-items: center; 
+             justify-content: center; 
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+        }
+        .btnss{
+            font-size: 30px;
+            padding: 15px;
+            background-color: black;
+            color: white;
+            border-radius: 15px;
+        }
+        header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+            /* justify-content: center; */
+            /* height: 90vh; */
+        }
+        .btnss{
+            margin-right: 10px;
+        }
+        #btn3:disabled{
+            background-color: rgb(75, 72, 72);
+        }
+        #btn1:disabled{
+            background-color: rgb(75, 72, 72);
+        }
+        
+        #btn2:disabled{
+            background-color: rgb(75, 72, 72);
+        }
+        #win{
+            background-color: black;
+            color: white;
+            padding: 15px;
+            display: none;
+            margin-top: 20px;
+            border-radius: 20px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+
+        <header>
+            <div class="container">
+            <div class="row">
+            <div class="col"  onclick="buttonclick(this)"  id="0"></div>
+            <div class="col"  onclick="buttonclick(this)"  id="1"></div>
+            <div class="col"  onclick="buttonclick(this)"  id="2"></div>
+        </div>
+        <div class="row">
+            <div class="col"  onclick="buttonclick(this)"  id="3"></div>
+            <div class="col"  onclick="buttonclick(this)"  id="4"></div>
+            <div class="col"  onclick="buttonclick(this)"  id="5"></div>
+        </div>
+        <div class="row">
+            <div class="col"  onclick="buttonclick(this)"  id="6"></div>
+            <div class="col"  onclick="buttonclick(this)"  id="7"></div>
+            <div class="col"  onclick="buttonclick(this)"  id="8"></div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="btnss" id="btn1">
+            X Turn
+        </button>
+        <button disabled=""true class="btnss" id="btn2">
+            O Turn
+        </button>
+        <button disabled="true" class="btnss" id="btn3">
+            Restart
+        </button>
+    </div>
+</header>
+<div id="win"></div>
+</div>
+<script src="tic-tac-toe.js"></script>
+</body>
+</html>
